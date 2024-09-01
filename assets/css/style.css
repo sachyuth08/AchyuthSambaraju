@@ -1,14 +1,3 @@
-/**
-* Template Name: DevFolio
-* Updated: May 30 2023 with Bootstrap v5.3.0
-* Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
   background-color: #f5f5f5;
   color: #4e4e4e;
@@ -1227,62 +1216,113 @@ a:hover {
 /*--------------------------------------------------------------
 # Blog
 --------------------------------------------------------------*/
-@media (min-width: 767px) {
-  .card-blog {
-    margin-bottom: 3rem;
-  }
+
+
+/* Ensure the entire section spans full width */
+.row {
+  width: 100%;
+  margin: 0 auto;
 }
 
-.card-blog .card-body {
+/* Card Layout */
+.card-blog {
+  display: flex;
+  flex-direction: row; /* Align content horizontally */
+  background-color: #f5f5f5; /* Light grey background */
+  margin-bottom: 3rem;
+  border-radius: 20px; /* Rounded corners */
+  overflow: hidden;
+  box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: relative;
+  width: 100%;
+}
+
+/* Image on the left */
+.card-blog .card-img {
+  flex: 0 0 300px; /* Fixed width for the image */
+  height: 150px; /* Fixed height for the image */
+  margin-right: 20px; /* Space between image and content */
   position: relative;
 }
 
-.card-blog .card-category-box {
+.card-blog .card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px; /* Rounded corners for the image */
+  border: none; /* Remove border around the image */
+}
+
+/* Grey bar below the image */
+
+.info-bar {
+  width: 100%; /* Match the width of the image container */
+  max-width: 300px; /* Ensure the grey bar doesn't exceed the image width */
+  background-color: #ddd;
+  padding: 10px;
+  border-radius: 10px; /* Rounded corners for the bar */
+  display: flex;
+  flex-direction: column; /* Stack location and time vertically */
+  justify-content: center; /* Center the items vertically */
+  align-items: flex-start; /* Align items to the start (left side) */
   position: absolute;
-  text-align: center;
-  top: -16px;
-  left: 15px;
-  right: 15px;
-  line-height: 25px;
-  overflow: hidden;
+  bottom: 20px; /* Positioned above the bottom border of the box */
+  left: 20px; /* Align with the image's left edge */
+  z-index: 1; /* Ensure it appears above other content */
 }
 
-.card-blog .card-category {
-  display: inline-block;
-  color: #fff;
-  padding: 0 15px 5px;
-  overflow: hidden;
-  background-color: #0078ff;
-  border-radius: 4px;
+
+/* On Campus Label centered and below the image */
+.card-category-box {
+  width: 100%; /* Match the width of the image container */
+  max-width: 300px; /* Ensure the grey bar doesn't exceed the image width */
+  background-color: #cccbcb;
+  padding: 10px;
+  border-radius: 10px; /* Rounded corners for the bar */
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center;
+  text-align: center; /* Center the text inside the box */
+  position: absolute;
+  bottom: 115px; /* Positioned above the grey bar */
+  left: 20px; /* Align with the image's left edge */
+  z-index: 2; /* Ensure it appears above other content */
 }
 
-.card-blog .card-category .category {
-  color: #fff;
-  display: inline-block;
-  text-transform: uppercase;
-  font-size: 0.7rem;
-  letter-spacing: 0.1px;
-  margin-bottom: 0;
+
+/* Text content */
+.card-blog .card-body {
+  flex: 1;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the content */
 }
 
-.card-blog .card-title {
-  font-size: 1.3rem;
-  margin-top: 0.6rem;
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .card-blog {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-blog .card-img {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+  }
+
+  .info-bar, .card-category-box {
+    width: 100%;
+    max-width: 100%;
+    position: static;
+    margin-top: 10px;
+  }
 }
 
-.card-blog .card-description {
-  color: #4e4e4e;
-}
 
-.card-blog .post-author {
-  display: inline-block;
-}
 
-.card-blog .post-date {
-  color: #4e4e4e;
-  display: inline-block;
-  float: right;
-}
 
 /*--------------------------------------------------------------
 # Blog Single
