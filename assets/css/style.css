@@ -813,41 +813,59 @@ a:hover {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+
+
 .about-mf .box-shadow-full {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 1.5rem;  /* Reduce padding to decrease white space */
+  padding-bottom: 1.5rem;
+  border-radius: 15px; /* Rounded edges */
 }
 
 .about-mf .about-img {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  text-align: center; /* Center the image */
 }
 
 .about-mf .about-img img {
-  margin-left: 10px;
+  margin-left: 0px;
 }
 
-@media (min-width: 767px) {
-  .about-mf .box-pl2 {
-    margin-top: 3rem;
-    padding-left: 0rem;
-  }
+.col-md-12 {
+  padding: 10px 0; /* Reduce padding to create less white space */
+}
+
+.title-box-2 {
+  margin-bottom: 10px; /* Reduce space between title and text */
+}
+
+.summary-text {
+  margin-left: 0px;
+  margin-top: 15px; /* Reduce gap between heading and text */
+}
+
+.skill-mf {
+  text-align: left; /* Align skills section to the left */
+}
+
+.skill-mf p.title-s {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 .skill-mf span {
   color: #4e4e4e;
+  font-size: 1.1rem; /* Increase the font size for skills */
 }
 
-.skill-mf .progress {
-  background-color: #cde1f8;
-  margin: 0.5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: 0.7rem;
+@media (min-width: 768px) {
+  .col-md-12 {
+    padding-left: 20px;  /* Reduced padding for smaller gaps */
+    padding-right: 20px;
+  }
 }
 
-.skill-mf .progress .progress-bar {
-  height: 0.7rem;
-  background-color: #0078ff;
-}
+
 
 /*--------------------------------------------------------------
 # Services
@@ -1214,9 +1232,8 @@ a:hover {
 }
 
 /*--------------------------------------------------------------
-# Blog
+# Experience and Education
 --------------------------------------------------------------*/
-
 
 /* Ensure the entire section spans full width */
 .row {
@@ -1254,9 +1271,9 @@ a:hover {
   border: none; /* Remove border around the image */
 }
 
-/* Grey bar below the image */
-
-.info-bar {
+/* Grey bar below the image - only show in specific sections */
+#blog .info-bar,
+#education .info-bar {
   width: 100%; /* Match the width of the image container */
   max-width: 300px; /* Ensure the grey bar doesn't exceed the image width */
   background-color: #ddd;
@@ -1272,9 +1289,14 @@ a:hover {
   z-index: 1; /* Ensure it appears above other content */
 }
 
+/* Hide grey bar by default */
+.info-bar {
+  display: none;
+}
 
-/* On Campus Label centered and below the image */
-.card-category-box {
+/* On Campus Label centered and below the image - only show in specific sections */
+#blog .card-category-box,
+#education .card-category-box {
   width: 100%; /* Match the width of the image container */
   max-width: 300px; /* Ensure the grey bar doesn't exceed the image width */
   background-color: #cccbcb;
@@ -1290,6 +1312,10 @@ a:hover {
   z-index: 2; /* Ensure it appears above other content */
 }
 
+/* Hide card category box by default */
+.card-category-box {
+  display: none;
+}
 
 /* Text content */
 .card-blog .card-body {
@@ -1320,7 +1346,6 @@ a:hover {
     margin-top: 10px;
   }
 }
-
 
 
 
@@ -1500,3 +1525,47 @@ footer .credits {
 footer .credits a {
   color: #fff;
 }
+
+/*----------------------------------------------------------*/
+/* Align social media icons horizontally */
+
+.socials ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex; /* Use flexbox for horizontal alignment */
+  justify-content: flex-start; /* Align the icons to the left */
+}
+
+.socials ul li {
+  display: flex;
+  align-items: center; /* Center the icons vertically */
+  justify-content: center; /* Center the icons horizontally within the circle */
+  margin: 0 15px; /* Adds space between icons */
+}
+
+.socials .ico-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px; /* Adjusted for a better size */
+  width: 50px; /* Adjusted for a better size */
+  border-radius: 50%;
+  background-color: white;
+  border: 3px solid #0078ff;
+  font-size: 28px;
+  color: #01050a;
+  transition: all 0.3s ease;
+}
+
+.socials .ico-circle i {
+  font-size: 28px;
+  line-height: 1; /* Ensures the icon is vertically centered */
+}
+
+.socials .ico-circle:hover {
+  background-color: #0078ff;
+  color: white;
+}
+
+
