@@ -1507,25 +1507,6 @@ a:hover {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-footer {
-  text-align: center;
-  color: #fff;
-  padding: 25px 0;
-  background: #0062d3;
-}
-
-footer .copyright {
-  margin-bottom: 0.3rem;
-}
-
-footer .credits {
-  margin-bottom: 0;
-}
-
-footer .credits a {
-  color: #fff;
-}
-
 /* Styling for the fun-footer */
 .fun-footer {
   background-color: #f0f8ff; /* Light blue background */
@@ -1558,7 +1539,7 @@ footer .credits a {
 footer {
   margin-top: 10px;
 }
-<!-- -->
+
 
 /*----------------------------------------------------------*/
 /* Align social media icons horizontally */
