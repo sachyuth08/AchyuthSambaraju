@@ -1526,6 +1526,40 @@ footer .credits a {
   color: #fff;
 }
 
+/* Styling for the fun-footer */
+.fun-footer {
+  background-color: #f0f8ff; /* Light blue background */
+  color: #000; /* Black text */
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
+  text-align: center;
+  padding: 20px;
+}
+
+.fun-footer .credits {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Styling for the formal-footer */
+.formal-footer {
+  background-color: #333; /* Dark background */
+  color: #fff; /* White text */
+  font-family: 'Arial', sans-serif; /* More formal font */
+  text-align: center;
+  padding: 20px;
+}
+
+.formal-footer .credits {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Add some padding to create space between the footers */
+footer {
+  margin-top: 10px;
+}
+
+
 /*----------------------------------------------------------*/
 /* Align social media icons horizontally */
 
