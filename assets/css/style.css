@@ -1141,14 +1141,7 @@ a:hover {
   }
 }
 
-/*--------------------------------------------------------------
-# Experience and Education
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-# Experience and Education
---------------------------------------------------------------*/
-
+/* Experience and Education*/
 /* Card Layout */
 .card-blog {
   display: flex;
@@ -1169,6 +1162,7 @@ a:hover {
   flex-direction: column; /* Stack the image and grey boxes vertically */
   align-items: flex-start; /* Align content to the left */
   flex: 0 0 300px; /* Fixed width for the container */
+  width: 300px;
 }
 
 /* Image */
