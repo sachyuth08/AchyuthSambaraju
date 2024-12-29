@@ -292,35 +292,7 @@ a:hover {
   display: block;
 }
 
-/*------/ Owl Carousel /------*/
-.owl-theme .owl-dots {
-  text-align: center;
-  margin-top: 18px;
-}
 
-.owl-theme .owl-dots .owl-dot {
-  display: inline-block;
-}
-
-.owl-theme .owl-dots .owl-dot span {
-  width: 18px;
-  height: 7px;
-  margin: 5px 5px;
-  background: #cde1f8;
-  border: 0px solid #cde1f8;
-  display: block;
-  transition: all 0.6s ease-in-out;
-  cursor: pointer;
-}
-
-.owl-theme .owl-dots .owl-dot:hover span {
-  background-color: #cde1f8;
-}
-
-.owl-theme .owl-dots .owl-dot.active span {
-  background-color: #1B1B1B;
-  width: 25px;
-}
 
 /*--/ Scrolltop s /--*/
 .scrolltop-mf {
@@ -947,35 +919,7 @@ a:hover {
   color: #4e4e4e;
 }
 
-/*--------------------------------------------------------------
-# Counter
---------------------------------------------------------------*/
-.counter-box {
-  color: #fff;
-  text-align: center;
-}
 
-@media (min-width: 577px) {
-  .counter-box {
-    margin-bottom: 1.8rem;
-  }
-}
-
-.counter-ico {
-  margin-bottom: 1rem;
-}
-
-.counter-ico .ico-circle {
-  height: 60px;
-  width: 60px;
-  line-height: 1.5;
-  box-shadow: 0 0 0 10px #cde1f8;
-}
-
-.counter-num .counter {
-  font-size: 2rem;
-  margin-bottom: 0;
-}
 
 /*--------------------------------------------------------------
 # Portfolio
@@ -1097,81 +1041,7 @@ a:hover {
   padding: 0;
 }
 
-/*--------------------------------------------------------------
-# Testimonials
---------------------------------------------------------------*/
-.testimonial-box {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  text-align: center;
-  padding: 2rem;
-  border-radius: var(--box-radius);
-  box-shadow: var(--box-shadow);
-}
 
-
-.testimonial-box .author-test {
-  margin-top: 1rem;
-}
-
-.testimonial-box .author-test img {
-  margin: 0 auto;
-}
-
-.testimonial-box .author {
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 600;
-  margin: 1rem 0;
-  display: block;
-  font-size: 1.4rem;
-}
-
-.testimonial-box .comit {
-  font-size: 2rem;
-  color: #0078ff;
-  background-color: #fff;
-  width: 52px;
-  height: 52px;
-  display: block;
-  margin: 0 auto;
-  border-radius: 50%;
-  line-height: 1.6;
-}
-
-@media (min-width: 768px) {
-  .testimonial-box .description {
-    padding: 0 5rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .testimonial-box .description {
-    padding: 0 8rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .testimonial-box .description {
-    padding: 0 13rem;
-  }
-}
-
-.swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: rgba(255, 255, 255, 0.4);
-  opacity: 1;
-}
-
-.swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #fff;
-}
 
 /*--------------------------------------------------------------
 # Contact
@@ -1275,11 +1145,9 @@ a:hover {
 # Experience and Education
 --------------------------------------------------------------*/
 
-/* Ensure the entire section spans full width */
-.row {
-  width: 100%;
-  margin: 0 auto;
-}
+/*--------------------------------------------------------------
+# Experience and Education
+--------------------------------------------------------------*/
 
 /* Card Layout */
 .card-blog {
@@ -1295,76 +1163,71 @@ a:hover {
   width: 100%;
 }
 
-
-/* Image on the left */
-.card-blog .card-img {
-  flex: 0 0 300px; /* Fixed width for the image */
-  height: 150px; /* Fixed height for the image */
-  margin-right: 20px; /* Space between image and content */
-  position: relative;
+/* Image Container */
+.card-img-container {
+  display: flex;
+  flex-direction: column; /* Stack the image and grey boxes vertically */
+  align-items: flex-start; /* Align content to the left */
+  flex: 0 0 300px; /* Fixed width for the container */
 }
 
-.card-blog .card-img img {
+/* Image */
+.card-img {
+  width: 300px; /* Fixed width */
+  height: 150px; /* Fixed height */
+  margin-bottom: 0px; /* Space below the image */
+}
+
+.card-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px; /* Rounded corners for the image */
-  border: none; /* Remove border around the image */
+  border-radius: 10px;
+  border: none;
 }
 
-/* Grey bar below the image - only show in specific sections */
-#blog .info-bar,
-#education .info-bar {
-  width: 100%; /* Match the width of the image container */
-  max-width: 300px; /* Ensure the grey bar doesn't exceed the image width */
+/* Grey Bar: Info Bar */
+.info-bar {
+  width: 300px; /* Fixed width matching the image */
+  height: 60px; /* Fixed height */
   background-color: #ddd;
   padding: 10px;
-  border-radius: 10px; /* Rounded corners for the bar */
+  border-radius: 10px;
   display: flex;
-  flex-direction: column; /* Stack location and time vertically */
-  justify-content: center; /* Center the items vertically */
-  align-items: flex-start; /* Align items to the start (left side) */
-  position: absolute;
-  bottom: 20px; /* Positioned above the bottom border of the box */
-  left: 20px; /* Align with the image's left edge */
-  z-index: 1; /* Ensure it appears above other content */
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 10px; /* Space below the image or previous element */
 }
 
-/* Hide grey bar by default */
-.info-bar {
-  display: none;
-}
-
-/* On Campus Label centered and below the image - only show in specific sections */
-#blog .card-category-box,
-#education .card-category-box {
-  width: 100%; /* Match the width of the image container */
-  max-width: 300px; /* Ensure the grey bar doesn't exceed the image width */
+/* Grey Box 2: Card Category Box */
+.card-category-box {
+  width: 300px; /* Fixed width matching the image */
+  height: 30px; /* Fixed height */
   background-color: #cccbcb;
   padding: 10px;
-  border-radius: 10px; /* Rounded corners for the bar */
+  border-radius: 10px;
   display: flex;
-  justify-content: center; /* Center the content horizontally */
+  justify-content: center;
   align-items: center;
-  text-align: center; /* Center the text inside the box */
-  position: absolute;
-  bottom: 115px; /* Positioned above the grey bar */
-  left: 20px; /* Align with the image's left edge */
-  z-index: 2; /* Ensure it appears above other content */
+  text-align: center;
+  margin-top: 10px; /* Space below the first grey box */
 }
 
-/* Hide card category box by default */
-.card-category-box {
-  display: none;
-}
-
-/* Text content */
-.card-blog .card-body {
+/* Text Content */
+.card-body {
   flex: 1;
   padding: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Vertically center the content */
+  justify-content: center;
+  margin-left: 20px; /* Add space between image and text */
+  align-items: flex-start; /* Align text to the left */
+}
+
+/* Fix for inconsistent image heights */
+.card-blog .card-body, .card-blog .card-img-container {
+  align-items: flex-start; /* Align both image and text content */
 }
 
 /* Media Query for Smaller Screens */
@@ -1374,16 +1237,14 @@ a:hover {
     align-items: center;
   }
 
-  .card-blog .card-img {
+  .card-img-container {
     width: 100%;
-    height: auto;
-    margin-right: 0;
+    align-items: center;
   }
 
-  .info-bar, .card-category-box {
+  .card-img, .info-bar, .card-category-box {
     width: 100%;
     max-width: 100%;
-    position: static;
     margin-top: 10px;
   }
 }
@@ -1555,7 +1416,7 @@ a:hover {
 .fun-footer {
   background-color: #f0f8ff; /* Light blue background */
   color: #000; /* Black text */
-  font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
+  font-family: 'Comic Sans MS', cursive, sans-serif; 
   text-align: center;
   padding: 20px;
 }
